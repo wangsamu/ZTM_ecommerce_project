@@ -47,6 +47,8 @@ function SignUpForm() {
         console.log("User created successfully!");
         console.log(userDocRef);
         refreshFormFields();
+      } else {
+        console.log("something went wrong :(");
       }
     } catch (error) {
       if (error.code === "auth/email-already-in-use") {
@@ -100,7 +102,7 @@ function SignUpForm() {
     },
   ];
   return (
-    <div>
+    <div className="sign-up-container">
       <h2>Don't have an account yet?</h2>
       <span>Sign up in a just a few seconds!</span>
       <form onSubmit={handleSubmit}>
@@ -111,7 +113,7 @@ function SignUpForm() {
             inputOptions={inputs.inputOptions}
           />
         ))}
-        <Button type="submit">Sign Up</Button>
+        <Button children="Sign In" type="submit" />
       </form>
     </div>
   );
