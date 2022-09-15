@@ -8,8 +8,9 @@ import {
   createUserDocumentFromAuth,
 } from "../../utils/firebase/firebase.utils";
 import SignUpForm from "../../components/sign-up-form/SignUpForm";
+import Button from "../../components/button/Button";
 
-function SignIn() {
+function Authentication() {
   useEffect(async () => {
     const response = await getRedirectResult(auth);
     if (response) {
@@ -34,9 +35,10 @@ function SignIn() {
       <button onClick={logGoogleRedirectUser}>
         Sign-in with Google Redirect
       </button>
+      <Button />
       <SignUpForm />
     </div>
   );
 }
 
-export default SignIn;
+export default Authentication;
