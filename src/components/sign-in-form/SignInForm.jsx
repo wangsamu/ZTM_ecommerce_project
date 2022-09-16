@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import { UserContext } from "../../context/UserContext";
+
 import {
   auth,
   signInWithGooglePopup,
@@ -7,7 +8,6 @@ import {
   signInAuthWithEmailAndPassword,
 } from "../../utils/firebase/firebase.utils";
 
-import { getRedirectResult } from "firebase/auth";
 import Button from "../button/Button";
 import FormInput from "../form-input/FormInput";
 import "./sign-in-form.styles.scss";
