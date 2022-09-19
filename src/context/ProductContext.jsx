@@ -1,15 +1,16 @@
 import { createContext, useEffect, useState } from "react";
 import { UserContext } from "./UserContext";
 
+import PRODUCTS from "../shop-data.json";
+
 export const ProductContext = createContext({
-  currentContext: null,
+  products: [],
   setCurrentContext: () => null,
 });
 
 export const ProductProvider = ({ children }) => {
-  const [currentContext, setCurrentContext] = useState(null);
-  const value = { currentContext, setCurrentContext };
+  const [products, setProducts] = useState(PRODUCTS);
+  const value = { products };
 
-  useEffect(() => {}, []);
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 };
