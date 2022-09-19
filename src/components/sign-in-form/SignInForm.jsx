@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-// import React, { useState, useContext } from "react";
-// import { UserContext } from "../../context/UserContext";
 
 import {
   auth,
@@ -22,8 +20,6 @@ function SignInForm() {
   const [formFields, setFormFields] = useState(defaultFormField);
   const { email, password } = formFields;
 
-  // const { setCurrentUser } = useContext(UserContext);
-
   const handleChange = (event) => {
     const { name, value } = event.target;
 
@@ -36,7 +32,6 @@ function SignInForm() {
     try {
       // check if user is authenticated with email and password
       const { user } = await signInAuthWithEmailAndPassword(email, password);
-      // setCurrentUser(user);
       console.log("Logged in successfully!");
       refreshFormFields();
     } catch (error) {
@@ -77,8 +72,6 @@ function SignInForm() {
 
   const logGoogleUser = async () => {
     await signInWithGooglePopup();
-    // const { user } = await signInWithGooglePopup();
-    // createUserDocumentFromAuth(user);
   };
 
   return (
