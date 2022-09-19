@@ -1,9 +1,12 @@
 import React from "react";
+import SHOP_DATA from "../../shop-data.json";
 
 function Shop() {
   return (
     <div>
-      <h1>I'm the Shop</h1>
+      {SHOP_DATA.map(({ id, name }) => {
+        return <div key={id}>{name}</div>;
+      })}
     </div>
   );
 }
