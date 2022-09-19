@@ -2,11 +2,11 @@ import React from "react";
 import Button from "../button/Button";
 
 function ProductCard({ product }) {
-  const { name, price, imgURL } = product;
+  const { name, price, imageUrl } = product;
 
   return (
     <div>
-      <img src={imgURL} alt={name} />
+      <img src={imageUrl} alt={name} />
       <div>
         <span className="name">{name}</span>
         <span className="price">{price}</span>
