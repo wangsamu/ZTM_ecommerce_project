@@ -5,7 +5,11 @@ function Shop() {
   return (
     <div>
       {SHOP_DATA.map(({ id, name }) => {
-        return <div key={id}>{name}</div>;
+        return (
+          <div key={id}>
+            <h1>{name}</h1>
+          </div>
+        );
       })}
     </div>
   );
