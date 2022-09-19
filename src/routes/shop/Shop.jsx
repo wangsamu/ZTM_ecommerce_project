@@ -3,6 +3,7 @@ import { ProductContext } from "../../context/ProductContext";
 
 function Shop() {
   const { products } = useContext(ProductContext);
+  console.log(products);
 
   return (
     <div>
